@@ -1067,6 +1067,20 @@ navbar {
 .article-date {
   float: left;
 }
+.meta-info-dates {
+  color: var(--article-meta);
+  font-size: 16px;
+  font-weight: medium;
+  margin-bottom: 6px;
+}
+.meta-info-dates .date-created,
+.meta-info-dates .date-updated {
+  margin-bottom: 2px;
+}
+.meta-info-dates .date-created .date-label,
+.meta-info-dates .date-updated .date-label {
+  margin-right: 6px;
+}
 .meta-info-bar {
   color: var(--article-meta);
   font-size: 16px;
