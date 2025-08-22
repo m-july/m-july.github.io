@@ -38,7 +38,7 @@
 }
 @supports (color: oklch(0 0 0)) {
   :root {
-    --primary: oklch(0.75 0.14 var(--primary-hue));
+    --primary: oklch(0.8 0.1 var(--primary-hue));
     --nav-dropdown-bg: oklch(0.2 0.02 var(--primary-hue));
     --page-background: oklch(0.16 0.014 var(--primary-hue));
     --card-background: oklch(0.25 0.02 var(--primary-hue));
@@ -73,7 +73,7 @@
 }
 @supports not (color: oklch(0 0 0)) {
   :root {
-    --primary: #bc98f9;
+    --primary: #c7aff5;
     --nav-dropdown-bg: #17141e;
     --page-background: #0e0c12;
     --card-background: #23202a;
@@ -129,7 +129,7 @@
 }
 @supports (color: oklch(0 0 0)) {
   :root[theme='light'] {
-    --primary: oklch(0.7 0.14 var(--primary-hue));
+    --primary: oklch(0.55 0.18 var(--primary-hue));
     --page-background: oklch(0.95 0.01 var(--primary-hue));
     --nav-dropdown-bg: oklch(0.98 0.005 var(--primary-hue));
     --btn-bg: oklch(0.95 0.025 var(--primary-hue));
@@ -158,7 +158,7 @@
 }
 @supports not (color: oklch(0 0 0)) {
   :root[theme='light'] {
-    --primary: #ac89e8;
+    --primary: #8451c9;
     --page-background: #efedf4;
     --nav-dropdown-bg: #f9f8fb;
     --btn-bg: #f1ebfd;
@@ -308,7 +308,7 @@ body,
   height: 100%;
 }
 body {
-  font: 16px "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font: 20px "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-text-size-adjust: 100%;
   background: var(--page-background);
   background-size: 240px;
@@ -536,13 +536,13 @@ navbar,
 .widget-tag-list-link {
   height: 32px;
   padding: 0 12px;
-  font-size: 14px;
+  font-size: 18px;
 }
 .article-title,
 .comment-card .main-title,
 .archive-main-card .archive-title {
   text-decoration: none;
-  font-size: 32px;
+  font-size: 42px;
   font-weight: bold;
   color: var(--main-title);
   line-height: 40px;
@@ -580,19 +580,23 @@ navbar,
 }
 .article-entry h1,
 .widget h1 {
-  font-size: 2em;
+  font-size: 1.8em;
+  color: var(--primary);
 }
 .article-entry h2,
 .widget h2 {
-  font-size: 1.5em;
+  font-size: 1.6em;
+  color: var(--primary);
 }
 .article-entry h3,
 .widget h3 {
   font-size: 1.3em;
+  color: var(--primary);
 }
 .article-entry h4,
 .widget h4 {
-  font-size: 1.2em;
+  font-size: 1.1em;
+  color: var(--primary);
 }
 .article-entry h5,
 .widget h5 {
@@ -651,7 +655,7 @@ navbar,
 .article-entry dl,
 .widget dl {
   margin: 0 20px;
-  line-height: 1.6em;
+  line-height: 1.4em;
 }
 .article-entry ul ul,
 .widget ul ul,
@@ -774,6 +778,7 @@ navbar {
   margin: 0 auto;
   border-radius: 0 0 16px 16px;
   top: 0;
+  z-index: 100;
 }
 #title-nav {
   margin-left: 16px;
@@ -794,7 +799,7 @@ navbar {
   display: -ms-flexbox;
   display: box;
   display: flex;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   -webkit-transition: background 0.15s ease-out;
   -moz-transition: background 0.15s ease-out;
@@ -880,7 +885,7 @@ navbar {
 .nav-icon {
   font-family: FontAwesome;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   width: 44px;
   height: 44px;
   display: -webkit-box;
@@ -911,9 +916,6 @@ navbar {
   .nav-icon.mobile-hide {
     display: none;
   }
-}
-.nav-icon .rss {
-  font-weight: 300;
 }
 .nav-icon .light-mode-icon {
   position: absolute;
@@ -1069,7 +1071,7 @@ navbar {
 }
 .meta-info-dates {
   color: var(--article-meta);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: medium;
   margin-bottom: 6px;
 }
@@ -1083,7 +1085,7 @@ navbar {
 }
 .meta-info-bar {
   color: var(--article-meta);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: medium;
   text-decoration: none;
   display: -webkit-box;
@@ -1289,7 +1291,7 @@ navbar {
   line-clamp: 3;
   -webkit-box-orient: vertical;
   margin: 16px 0;
-  line-height: 1.6em;
+  line-height: 1.4em;
   word-break: break-word;
 }
 a.article-title:hover {
@@ -1327,7 +1329,7 @@ a.article-title:active {
 }
 .article-entry p,
 .article-entry table {
-  line-height: 1.6em;
+  line-height: 1.4em;
   margin: 1.2em 0;
 }
 .article-entry h1,
@@ -1344,14 +1346,14 @@ a.article-title:active {
 .article-entry h4,
 .article-entry h5,
 .article-entry h6 {
-  line-height: 1.1em;
-  margin: 1.1em 0;
+  line-height: 1em;
+  margin: 1em 0;
 }
 .article-entry ul,
 .article-entry ol,
 .article-entry dl {
-  margin-top: 1.6em;
-  margin-bottom: 1.6em;
+  margin-top: 1.4em;
+  margin-bottom: 1.4em;
 }
 .article-entry img,
 .article-entry video {
@@ -1406,8 +1408,8 @@ a.article-title:active {
   transition: background 0.15s ease-out;
 }
 .article-entry footer {
-  font-size: 16px;
-  margin: 1.6em 0;
+  font-size: 20px;
+  margin: 1.4em 0;
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-align: right;
 }
@@ -1475,7 +1477,7 @@ a.article-title:active {
   line-height: 40px;
   color: var(--btn-text-content);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: medium;
   padding-left: 24px;
   padding-right: 40px;
@@ -1492,8 +1494,8 @@ a.article-title:active {
 }
 .article-footer {
   font-size: 0.85em;
-  line-height: 1.6em;
-  margin: 0 0 0 24px;
+  line-height: 1.4em;
+  margin: 0 0 0 22px;
 }
 .article-footer:before,
 .article-footer:after {
@@ -1525,7 +1527,7 @@ a.article-title:active {
 .article-tag-list-link,
 .widget-tag-list-link {
   color: var(--btn-content);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: medium;
   display: -webkit-box;
   display: -moz-box;
@@ -1573,7 +1575,7 @@ a.article-title:active {
   color: var(--btn-text-content);
   cursor: pointer;
   float: left;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: medium;
   display: -webkit-box;
   display: -moz-box;
@@ -1622,7 +1624,7 @@ a.article-title:active {
   gap: 20px;
   color: var(--neut-L75);
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   overflow: hidden;
   -webkit-transition: background 0.15s ease-out, color 0.15s ease-out;
   -moz-transition: background 0.15s ease-out, color 0.15s ease-out;
@@ -1701,7 +1703,7 @@ a.article-title:active {
 }
 .article-nav-title {
   font-size: 0.85em;
-  line-height: 1.6em;
+  line-height: 1.4em;
   margin-top: 0.5em;
 }
 .article-gallery {
@@ -2344,7 +2346,7 @@ a.article-title:active {
   margin: 16px auto;
   overflow: auto;
   color: #ccc;
-  line-height: 25.6px;
+  line-height: 28px;
 }
 .article-entry pre ::selection,
 .article-entry .highlight ::selection {
@@ -2409,7 +2411,7 @@ a.article-title:active {
   padding-right: 20px;
 }
 .article-entry .highlight .line {
-  height: 25.6px;
+  height: 28px;
 }
 .article-entry .highlight .line.marked {
   background: var(--highlight-selection);
@@ -2765,7 +2767,7 @@ input[type="range"] {
 .info-card a {
   color: var(--link);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
 }
 .widget ul ul,
 .info-card ul ul,
@@ -2840,7 +2842,7 @@ input[type="range"] {
   }
 }
 .info-card .username {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   color: var(--info-name);
   line-height: 28px;
@@ -2861,7 +2863,7 @@ input[type="range"] {
   margin-bottom: 12px;
 }
 .info-card .subtitle {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   color: var(--info-sub);
   margin-bottom: 8px;
@@ -2895,7 +2897,7 @@ input[type="range"] {
   font-size: 24px;
 }
 .widget {
-  line-height: 1.6em;
+  line-height: 1.4em;
   word-wrap: break-word;
   font-size: 0.9em;
 }
