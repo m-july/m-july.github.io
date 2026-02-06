@@ -20,12 +20,12 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="我们知道，数学公式中正负号 $\pm$ 用于表达两个可能的量。比如作： $$x &#x3D; \pm 1 \tag{1}$$ 这等价于 $x \in { +1, -1 }$。 并且，正负号可以搭配负正号 $\mp$ 使用，以表达 $\pm$ 与 $\mp$ 配对且符号相反（一者取 $+$、另一者取 $-$）。比如作： $$\begin{cases}x &#x3D; \pm 1 \y &#x3D; \mp 1\end{cases">
+  <meta name="description" content="我们知道，数学公式中正负号 $\pm$ 用于表达两个可能的量。比如作： $$x &#x3D; \pm 1 \tag{1}$$ 这等价于 $x \in \{ +1, -1 \}$。 并且，正负号可以搭配负正号 $\mp$ 使用，以表达 $\pm$ 与 $\mp$ 配对且符号相反（一者取 $+$、另一者取 $-$）。比如作： $$\begin{cases}x &#x3D; \pm 1 \\y &#x3D; \mp 1\end{ca">
 <meta property="og:type" content="article">
 <meta property="og:title" content="给正负号加下标">
 <meta property="og:url" content="https://m-july.github.io/2026/02/06/2026-other/plus_minus_sign/index.html">
 <meta property="og:site_name" content="七月的小窝 July&#39;s Blog">
-<meta property="og:description" content="我们知道，数学公式中正负号 $\pm$ 用于表达两个可能的量。比如作： $$x &#x3D; \pm 1 \tag{1}$$ 这等价于 $x \in { +1, -1 }$。 并且，正负号可以搭配负正号 $\mp$ 使用，以表达 $\pm$ 与 $\mp$ 配对且符号相反（一者取 $+$、另一者取 $-$）。比如作： $$\begin{cases}x &#x3D; \pm 1 \y &#x3D; \mp 1\end{cases">
+<meta property="og:description" content="我们知道，数学公式中正负号 $\pm$ 用于表达两个可能的量。比如作： $$x &#x3D; \pm 1 \tag{1}$$ 这等价于 $x \in \{ +1, -1 \}$。 并且，正负号可以搭配负正号 $\mp$ 使用，以表达 $\pm$ 与 $\mp$ 配对且符号相反（一者取 $+$、另一者取 $-$）。比如作： $$\begin{cases}x &#x3D; \pm 1 \\y &#x3D; \mp 1\end{ca">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-02-06T06:17:00.000Z">
 <meta property="article:modified_time" content="2026-01-07T18:30:00.000Z">
@@ -230,7 +230,7 @@
 
           </div>
           <div class="wordcount need-seperator meta-info">
-            782 字(词)
+            798 字(词)
           </div>
         </div>
         
@@ -241,24 +241,24 @@
         
           <html><head></head><body><p>我们知道，数学公式中正负号 $\pm$ 用于表达两个可能的量。比如作：</p>
 <p>$$<br>x = \pm 1 \tag{1}<br>$$</p>
-<p>这等价于 $x \in { +1, -1 }$。</p>
+<p>这等价于 $x \in \{ +1, -1 \}$。</p>
 <p>并且，正负号可以搭配负正号 $\mp$ 使用，以表达 $\pm$ 与 $\mp$ 配对且符号相反（一者取 $+$、另一者取 $-$）。比如作：</p>
-<p>$$<br>\begin{cases}<br>x = \pm 1 \<br>y = \mp 1<br>\end{cases} \tag{2}<br>$$</p>
-<p>这等价于 $(x, y) \in { (+1, -1), (-1, +1) }$。</p>
+<p>$$<br>\begin{cases}<br>x = \pm 1 \\<br>y = \mp 1<br>\end{cases} \tag{2}<br>$$</p>
+<p>这等价于 $(x, y) \in \{ (+1, -1), (-1, +1) \}$。</p>
 <p>正负号如果多次出现，则可能带有歧义。比如作：</p>
-<p>$$<br>\begin{cases}<br>x = \pm 1 \<br>y = \pm 1<br>\end{cases} \tag{3}<br>$$</p>
-<p>一种理解是，这两个 $\pm$ 是配对且符号相同的。也即其等价于 $(x, y) \in { (+1, +1), (-1, -1) }$。</p>
-<p>但另一种理解是，这两个 $\pm$ 是互相独立的。也即其等价于 $(x, y) \in { (+1, +1), (+1, -1), (-1, +1), (-1, -1) }$。</p>
+<p>$$<br>\begin{cases}<br>x = \pm 1 \\<br>y = \pm 1<br>\end{cases} \tag{3}<br>$$</p>
+<p>一种理解是，这两个 $\pm$ 是配对且符号相同的。也即其等价于 $(x, y) \in \{ (+1, +1), (-1, -1) \}$。</p>
+<p>但另一种理解是，这两个 $\pm$ 是互相独立的。也即其等价于 $(x, y) \in \{ (+1, +1), (+1, -1), (-1, +1), (-1, -1) \}$。</p>
 <p>一般需要通过额外的文字说明来解释这两个 $\pm$ 之间的关系，以区分这两种情况。</p>
 <p>我提倡为正负号加上下标，来区分正负号之间的配对关系。给出如下约定：</p>
 <ul>
 <li>约定：用 $\pm_i,\mp_i$ 表示第 $i$ 组配对符号。同一组（同下标）的符号取号联动：取上号或下号必须一致；不同组之间独立取号。</li>
 </ul>
 <p>因而就可以用</p>
-<p>$$<br>\begin{cases}<br>x = \pm_1 1 \<br>y = \pm_2 1<br>\end{cases} \tag{4}<br>$$</p>
-<p>表达 $(x, y) \in { (+1, +1), (+1, -1), (-1, +1), (-1, -1) }$；用</p>
-<p>$$<br>\begin{cases}<br>x = \pm_1 1 \<br>y = \pm_1 1<br>\end{cases} \tag{4}<br>$$</p>
-<p>表达 $(x, y) \in { (+1, +1), (-1, -1) }$。</p>
+<p>$$<br>\begin{cases}<br>x = \pm_1 1 \\<br>y = \pm_2 1<br>\end{cases} \tag{4}<br>$$</p>
+<p>表达 $(x, y) \in \{ (+1, +1), (+1, -1), (-1, +1), (-1, -1) \}$；用</p>
+<p>$$<br>\begin{cases}<br>x = \pm_1 1 \\<br>y = \pm_1 1<br>\end{cases} \tag{4}<br>$$</p>
+<p>表达 $(x, y) \in \{ (+1, +1), (-1, -1) \}$。</p>
 </body></html>
         
       </div>
