@@ -128,9 +128,9 @@ function renderSample(sample, index) {
         </div>
       </header>
 
-      <div class="compression-grid" aria-label="Compression rates">
-        ${renderCompressionCard("Ours (MeloBottleneck) compression rate", sample.compression.ours)}
-        ${renderCompressionCard("Baseline (O2B-Learner) compression rate", sample.compression.baseline)}
+      <div class="compression-grid" aria-label="Retention ratios">
+        ${renderCompressionCard("Ours (MeloBottleneck) retention ratio", sample.compression.ours)}
+        ${renderCompressionCard("Baseline (O2B-Learner) retention ratio", sample.compression.baseline)}
       </div>
 
       <section class="roll-panel" aria-label="Piano roll visualization">

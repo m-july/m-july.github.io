@@ -3,24 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="noindex, nofollow, noarchive" />
-  <meta name="description" content="Online demo page for MeloBottleneck: Learning Melody Skeletons as Latent Subsequences without Reduction Annotations." />
-  <title>MeloBottleneck DEMO: Melody Skeleton Extraction</title>
+  <meta name="description" content="Audio and piano-roll examples for MeloBottleneck: Compact Symbolic Melody Representations for Robust Retrieval." />
+  <title>MeloBottleneck: Compact Symbolic Melody Representations for Robust Retrieval | Demo</title>
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
   <header class="hero">
     <div class="hero__inner">
-      <p class="eyebrow">Supplementary Qualitative Examples</p>
-      <h1>MeloBottleneck DEMO:<br /><span>Melody Skeleton Extraction</span></h1>
+      <p class="eyebrow">Online Demo</p>
+      <h1>MeloBottleneck Demo:<br /><span>Compact Symbolic Melody Representations for Robust Retrieval</span></h1>
       <p class="hero__lead">
         This page presents qualitative examples for the manuscript
-        <strong>“MeloBottleneck: Learning Melody Skeletons as Latent Subsequences without Reduction Annotations”.</strong>
+        <strong>“MeloBottleneck: Compact Symbolic Melody Representations for Robust Retrieval”.</strong>
       </p>
       <p class="hero__lead">
-        Each sample compares the original melody, the MeloBottleneck skeleton,
-        and the O2B-Learner baseline skeleton through piano rolls and audio.
+        Each sample compares the original melody, a MeloBottleneck skeleton, and an O2B-Learner baseline skeleton.
+        These qualitative illustrations show the compact symbolic representations; retrieval results are reported in the paper.
       </p>
       <nav id="sample-nav" class="sample-nav" aria-label="Sample shortcuts"></nav>
     </div>
@@ -40,7 +39,10 @@
           The piano-roll visualization is split into a left header image and a right roll image. The header stays fixed,
           while the roll panel can be horizontally scrolled when the rendered sequence is longer than the viewport.
           Audio players below each roll provide direct listening comparisons.
-          In the overlaid audio, the extracted skeleton is played together with the original melody.
+        </p>
+        <p>
+          The displayed retention ratios are model-predicted or fixed sequence-length settings. Rounding and special-token
+          handling can make them differ from the exact fraction of note events retained. They do not measure bitrate or file-size savings.
         </p>
       </div>
       <div class="legend" aria-label="Visualization legend">
@@ -55,7 +57,7 @@
 
   <footer class="site-footer">
     <p>
-      MeloBottleneck qualitative examples.
+      MeloBottleneck qualitative demo. Static HTML/CSS/JS; no build step required.
     </p>
   </footer>
 </body>

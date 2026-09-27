@@ -83,6 +83,9 @@ h1 {
 
 h1 span {
   color: #263449;
+  display: inline-block;
+  font-size: 0.62em;
+  line-height: 1.08;
 }
 
 .hero__lead {
