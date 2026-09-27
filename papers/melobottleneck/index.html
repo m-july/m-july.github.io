@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="description" content="Online demo page for MeloBottleneck: Learning Melody Skeletons as Latent Subsequences without Reduction Annotations." />
+  <title>MeloBottleneck DEMO: Melody Skeleton Extraction</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__inner">
+      <p class="eyebrow">Supplementary Qualitative Examples</p>
+      <h1>MeloBottleneck DEMO:<br /><span>Melody Skeleton Extraction</span></h1>
+      <p class="hero__lead">
+        This page presents qualitative examples for the manuscript
+        <strong>“MeloBottleneck: Learning Melody Skeletons as Latent Subsequences without Reduction Annotations”.</strong>
+      </p>
+      <p class="hero__lead">
+        Each sample compares the original melody, the MeloBottleneck skeleton,
+        and the O2B-Learner baseline skeleton through piano rolls and audio.
+      </p>
+      <nav id="sample-nav" class="sample-nav" aria-label="Sample shortcuts"></nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <noscript>
+      <div class="noscript-card">
+        This demo uses a small JavaScript file to render samples from a data list. Please enable JavaScript to view the page.
+      </div>
+    </noscript>
+
+    <section class="intro-card" aria-labelledby="how-to-read">
+      <div>
+        <h2 id="how-to-read">How to read the examples</h2>
+        <p>
+          The piano-roll visualization is split into a left header image and a right roll image. The header stays fixed,
+          while the roll panel can be horizontally scrolled when the rendered sequence is longer than the viewport.
+          Audio players below each roll provide direct listening comparisons.
+          In the overlaid audio, the extracted skeleton is played together with the original melody.
+        </p>
+      </div>
+      <div class="legend" aria-label="Visualization legend">
+        <div><span class="legend-dot legend-dot--original"></span>Original</div>
+        <div><span class="legend-dot legend-dot--ours"></span>Ours / MeloBottleneck</div>
+        <div><span class="legend-dot legend-dot--baseline"></span>Baseline / O2B-Learner</div>
+      </div>
+    </section>
+
+    <div id="samples" class="sample-stack"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      MeloBottleneck qualitative examples.
+    </p>
+  </footer>
+</body>
+</html>

@@ -20,12 +20,12 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="1 背景 我们知道，数学公式中正负号 $\pm$ 用于表达两个可能的量。比如作： $$ x &#x3D; \pm 1 $$ 这等价于 $x \in \{ +1, -1 \}$。 并且，正负号可以搭配负正号 $\mp$ 使用，以表达 $\pm$ 与 $\mp$ 联动且符号相反（一者取 $+$、另一者取 $-$）。比如作： $$ \begin{cases} x &#x3D; \pm 1 \\ y &#x3D; \mp 1 \end">
+  <meta name="description" content="1 背景我们知道，数学公式中正负号 $\pm$ 用于表达两个可能的量。比如作： $$x &#x3D; \pm 1$$ 这等价于 $x \in \{ +1, -1 \}$。 并且，正负号可以搭配负正号 $\mp$ 使用，以表达 $\pm$ 与 $\mp$ 联动且符号相反（一者取 $+$、另一者取 $-$）。比如作： $$\begin{cases}x &#x3D; \pm 1 \\y &#x3D; \mp 1\end{cases}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为正负号增加下标">
 <meta property="og:url" content="https://m-july.github.io/2026/02/06/2026-other/plus_minus_sign/index.html">
 <meta property="og:site_name" content="七月的小窝 July&#39;s Blog">
-<meta property="og:description" content="1 背景 我们知道，数学公式中正负号 $\pm$ 用于表达两个可能的量。比如作： $$ x &#x3D; \pm 1 $$ 这等价于 $x \in \{ +1, -1 \}$。 并且，正负号可以搭配负正号 $\mp$ 使用，以表达 $\pm$ 与 $\mp$ 联动且符号相反（一者取 $+$、另一者取 $-$）。比如作： $$ \begin{cases} x &#x3D; \pm 1 \\ y &#x3D; \mp 1 \end">
+<meta property="og:description" content="1 背景我们知道，数学公式中正负号 $\pm$ 用于表达两个可能的量。比如作： $$x &#x3D; \pm 1$$ 这等价于 $x \in \{ +1, -1 \}$。 并且，正负号可以搭配负正号 $\mp$ 使用，以表达 $\pm$ 与 $\mp$ 联动且符号相反（一者取 $+$、另一者取 $-$）。比如作： $$\begin{cases}x &#x3D; \pm 1 \\y &#x3D; \mp 1\end{cases}">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-02-06T06:17:00.000Z">
 <meta property="article:modified_time" content="2026-01-07T18:30:00.000Z">
@@ -239,7 +239,7 @@
 
           </div>
           <div class="wordcount need-seperator meta-info">
-            1.4k 字(词)
+            1.5k 字(词)
           </div>
         </div>
         
@@ -248,86 +248,38 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <html><head></head><body><h1 id="背景"><span class="heading-number">1 </span>背景<a href="#背景" class="headerlink copy-link-btn" title="复制链接到此章节"><i class="fa-solid fa-link"></i></a></h1>
-<p>我们知道，数学公式中正负号 $\pm$ 用于表达两个可能的量。比如作：</p>
-<p>$$<br>
-x = \pm 1<br>
-$$</p>
+          <html><head></head><body><h1 id="背景"><span class="heading-number">1 </span>背景<a href="#背景" class="headerlink copy-link-btn" title="复制链接到此章节"><i class="fa-solid fa-link"></i></a></h1><p>我们知道，数学公式中正负号 $\pm$ 用于表达两个可能的量。比如作：</p>
+<p>$$<br>x = \pm 1<br>$$</p>
 <p>这等价于 $x \in \{ +1, -1 \}$。</p>
 <p>并且，正负号可以搭配负正号 $\mp$ 使用，以表达 $\pm$ 与 $\mp$ 联动且符号相反（一者取 $+$、另一者取 $-$）。比如作：</p>
-<p>$$<br>
-\begin{cases}<br>
-x = \pm 1 \\<br>
-y = \mp 1<br>
-\end{cases}<br>
-$$</p>
+<p>$$<br>\begin{cases}<br>x = \pm 1 \\<br>y = \mp 1<br>\end{cases}<br>$$</p>
 <p>这等价于 $(x, y) \in \{ (+1, -1), (-1, +1) \}$。</p>
 <p>正负号如果多次出现，则可能带有歧义。比如作：</p>
-<p>$$<br>
-\begin{cases}<br>
-x = \pm 1 \\<br>
-y = \pm 1<br>
-\end{cases}<br>
-$$</p>
+<p>$$<br>\begin{cases}<br>x = \pm 1 \\<br>y = \pm 1<br>\end{cases}<br>$$</p>
 <p>一种理解是，这两个 $\pm$ 是联动且符号相同的。也即其等价于 $(x, y) \in \{ (+1, +1), (-1, -1) \}$。</p>
 <p>但另一种理解是，这两个 $\pm$ 是互相独立的。也即其等价于 $(x, y) \in \{ (+1, +1), (+1, -1), (-1, +1), (-1, -1) \}$。</p>
 <p>一般需要通过额外的文字说明来解释这两个 $\pm$ 之间的关系，以区分这两种情况。</p>
-<h1 id="方法"><span class="heading-number">2 </span>方法<a href="#方法" class="headerlink copy-link-btn" title="复制链接到此章节"><i class="fa-solid fa-link"></i></a></h1>
-<p>我提倡为正负号增加下标，来区分正负号之间的联动关系。给出如下约定：</p>
+<h1 id="方法"><span class="heading-number">2 </span>方法<a href="#方法" class="headerlink copy-link-btn" title="复制链接到此章节"><i class="fa-solid fa-link"></i></a></h1><p>我提倡为正负号增加下标，来区分正负号之间的联动关系。给出如下约定：</p>
 <ul>
 <li>约定：同下标的正负号（负正号）视为同一组，它们的取号联动：取上号或下号必须一致；不同组之间独立取号。</li>
 </ul>
 <p>因而就可以用</p>
-<p>$$<br>
-\begin{cases}<br>
-x = \pm_A 1 \\<br>
-y = \pm_B 1<br>
-\end{cases}<br>
-$$</p>
+<p>$$<br>\begin{cases}<br>x = \pm_A 1 \\<br>y = \pm_B 1<br>\end{cases}<br>$$</p>
 <p>表达 $(x, y) \in \{ (+1, +1), (+1, -1), (-1, +1), (-1, -1) \}$；用</p>
-<p>$$<br>
-\begin{cases}<br>
-x = \pm_C 1 \\<br>
-y = \pm_C 1<br>
-\end{cases}<br>
-$$</p>
+<p>$$<br>\begin{cases}<br>x = \pm_C 1 \\<br>y = \pm_C 1<br>\end{cases}<br>$$</p>
 <p>表达 $(x, y) \in \{ (+1, +1), (-1, -1) \}$。</p>
 <p>这也接近最为标准严谨的作法，即用统一的变量符号来表示 $\pm$ 或 $\mp$，比如：</p>
-<p>$$<br>
-\begin{cases}<br>
-x = \epsilon_A \cdot 1 \\<br>
-y = \epsilon_B \cdot 1<br>
-\end{cases}, \quad \epsilon_A, \epsilon_B \in \{ +1, -1 \}<br>
-$$</p>
+<p>$$<br>\begin{cases}<br>x = \epsilon_A \cdot 1 \\<br>y = \epsilon_B \cdot 1<br>\end{cases}, \quad \epsilon_A, \epsilon_B \in \{ +1, -1 \}<br>$$</p>
 <p>和</p>
-<p>$$<br>
-\begin{cases}<br>
-x = \epsilon \cdot 1 \\<br>
-y = \epsilon \cdot 1<br>
-\end{cases}, \quad \epsilon \in \{ +1, -1 \}<br>
-$$</p>
-<h1 id="使用例"><span class="heading-number">3 </span>使用例<a href="#使用例" class="headerlink copy-link-btn" title="复制链接到此章节"><i class="fa-solid fa-link"></i></a></h1>
-<h2 id="例一：双二次方程的根"><span class="heading-number">3.1 </span>例一：双二次方程的根<a href="#例一：双二次方程的根" class="headerlink copy-link-btn" title="复制链接到此章节"><i class="fa-solid fa-link"></i></a></h2>
-<p>双二次方程 $x^4 + p x^2 + q = 0$ 的解为：</p>
-<p>$$<br>
-x = \pm_1 \sqrt {\frac {- p \pm_2 \sqrt {p^2 - 4 q}}{2}}<br>
-$$</p>
-<h2 id="例二：振幅调制"><span class="heading-number">3.2 </span>例二：振幅调制<a href="#例二：振幅调制" class="headerlink copy-link-btn" title="复制链接到此章节"><i class="fa-solid fa-link"></i></a></h2>
-<p>对于余弦形式的同振幅载波 $c(t)$ 和调制波 $m(t)$：</p>
-<p>$$<br>
-c(t) = \cos (\omega_c t \pm_c \phi_c), \quad m(t) = \cos (\omega_m t \pm_m \phi_m)<br>
-$$</p>
+<p>$$<br>\begin{cases}<br>x = \epsilon \cdot 1 \\<br>y = \epsilon \cdot 1<br>\end{cases}, \quad \epsilon \in \{ +1, -1 \}<br>$$</p>
+<h1 id="使用例"><span class="heading-number">3 </span>使用例<a href="#使用例" class="headerlink copy-link-btn" title="复制链接到此章节"><i class="fa-solid fa-link"></i></a></h1><h2 id="例一：双二次方程的根"><span class="heading-number">3.1 </span>例一：双二次方程的根<a href="#例一：双二次方程的根" class="headerlink copy-link-btn" title="复制链接到此章节"><i class="fa-solid fa-link"></i></a></h2><p>双二次方程 $x^4 + p x^2 + q = 0$ 的解为：</p>
+<p>$$<br>x = \pm_1 \sqrt {\frac {- p \pm_2 \sqrt {p^2 - 4 q}}{2}}<br>$$</p>
+<h2 id="例二：振幅调制"><span class="heading-number">3.2 </span>例二：振幅调制<a href="#例二：振幅调制" class="headerlink copy-link-btn" title="复制链接到此章节"><i class="fa-solid fa-link"></i></a></h2><p>对于余弦形式的同振幅载波 $c(t)$ 和调制波 $m(t)$： </p>
+<p>$$<br>c(t) = \cos (\omega_c t \pm_c \phi_c), \quad m(t) = \cos (\omega_m t \pm_m \phi_m)<br>$$</p>
 <p>通过积化和差公式</p>
-<p>$$<br>
-\cos u \cos v = \frac 1 2 \big( \cos (u + v) + \cos (u - v) \big)<br>
-$$</p>
+<p>$$<br>\cos u \cos v = \frac 1 2 \big( \cos (u + v) + \cos (u - v) \big)<br>$$</p>
 <p>可以得到</p>
-<p>$$<br>
-\begin{align*}<br>
-c(t) m(t) = \frac 1 2 \big( &amp; \cos ((\omega_c + \omega_m) t \pm_c \phi_c \pm_m \phi_m) \\<br>
-&amp;+ \cos ((\omega_c - \omega_m) t \pm_c \phi_c \mp_m \phi_m) \big)<br>
-\end{align*}<br>
-$$</p>
+<p>$$<br>\begin{align*}<br>c(t) m(t) = \frac 1 2 \big( &amp; \cos ((\omega_c + \omega_m) t \pm_c \phi_c \pm_m \phi_m) \\<br>&amp;+ \cos ((\omega_c - \omega_m) t \pm_c \phi_c \mp_m \phi_m) \big)<br>\end{align*}<br>$$</p>
 </body></html>
         
       </div>
